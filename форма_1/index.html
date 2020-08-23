@@ -12,17 +12,37 @@
 	<a href="#x" class="overlay" id="b"></a>
 	<div class="window">
 
-		<form class="forma" method="post" onSubmit="return validate(this)">
-			<input name="username" type="text" placeholder="Логин" value="">
-			<input name="password" type="password" placeholder="Пароль" value="">
-			<input name="password" type="password" placeholder="Повторите пароль" value="">
-			<input name="Name" type="text" placeholder="Имя" value="">
-			<input name="email" type="email" placeholder="email" value="">
-			<input name="phone" type="tel" placeholder="Номер телефона" value="">
-			<input class="button" name="photo" type="file">
+		<form class="forma" method="post" onsubmit="return exportF()">
+			<input name="username" type="text" id="login" placeholder="Логин" value="">
+			<input name="password" type="password" id="password" placeholder="Пароль" value="">
+			<input name="password" type="password" id="pass" placeholder="Повторите пароль" value="">
+			<input name="Name" type="text" id="name" placeholder="Имя" value="">
+			<input name="email" type="email" id="email" placeholder="email" value="">
+			<input name="phone" type="tel" id="tel" placeholder="Номер телефона" value="">
+			<input class="button" name="photo" id="photo" type="file">
 			<input class="button" name="submit" value="Отправить" type="submit">
 			<!--Для добавления большего количества полей нужно скопировать данную строку и зменить значения в атрибутах name и type на нужные -->
 		</form>
+		<table id="table" style="display: none">
+			<tr>
+				<td id="input">
+				</td>
+				<td id="password.table">
+				</td>
+				<td id="pass.table">
+				</td>
+				<td id="name.table">
+				</td>
+				<td id="email.table">
+				</td>
+				<td id="tel.table">
+				</td>
+				<td id="photo.table">
+				</td>
+			</tr>
+
+		</table>
+		<a style="display: none" id="downloadLink"></a>
 		<a class="close" title="Закрыть" href="#close"></a>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
